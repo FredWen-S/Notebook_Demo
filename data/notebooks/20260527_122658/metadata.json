@@ -1,0 +1,15 @@
+{
+  "id": "20260527_122658",
+  "name": "test",
+  "created_at": "2026-05-27T12:26:58.925709",
+  "sources": [
+    {
+      "source_id": "e099736d3823",
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "char_count": 20684,
+      "chunk_count": 54,
+      "added_at": "2026-05-27T12:27:14.862700"
+    }
+  ],
+  "chunk_count": 54
+}

@@ -64,7 +64,7 @@ class OllamaClient(LLMClient):
     ):
         self.model = model
         self.base_url = base_url
-        self.client = httpx.Client(timeout=120.0)  # LLM 生成可能比较慢
+        self.client = httpx.Client(timeout=300.0)  # 5 分钟，给慢机器留足时间
 
     def _check_available(self) -> bool:
         """检查 Ollama 是否可用"""

@@ -1,0 +1,650 @@
+[
+  {
+    "chunk_id": "b26f60cec69e",
+    "source_id": "e099736d3823",
+    "content": "从零手搓 GPT-2\n零基础完整实战指南\n原理推导 · 逐行代码 · 训练 · 加载官方权重\nPyTorch 实现 · 全部代码经实测可运行\nCPU / Mac(MPS) / 单卡 GPU 均可跑通",
+    "index": 0,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 0,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "48a1e2a9a7b0",
+    "source_id": "e099736d3823",
+    "content": "CPU / Mac(MPS) / 单卡 GPU 均可跑通目录\n目录 ..................................................................................................................................................................... 2\n第 0 章 · 全局地图：我们要做什么 ............................................................................................................... 4\n第 1 章 · 环境准备 ............................................................................................................................................ 5",
+    "index": 1,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 1,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "369c9b93eb8d",
+    "source_id": "e099736d3823",
+    "content": "51.1 需要装什么 ......................................................................................................................................... 5\n1.2 安装命令 ............................................................................................................................................. 5\n1.3 验证安装 + 认识张量 ....................................................................................................................... 5",
+    "index": 2,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 2,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "9f9589672471",
+    "source_id": "e099736d3823",
+    "content": "5第 2 章 · 数据：从文本到 token ................................................................................................................... 7\n2.1 为什么要分词 ..................................................................................................................................... 7\n2.2 用官方分词器 ..................................................................................................................................... 7",
+    "index": 3,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 3,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "7c58d12be9d3",
+    "source_id": "e099736d3823",
+    "content": "72.3 准备训练数据 ..................................................................................................................................... 7\n2.4 取一个 batch（最关键的数据函数） ........................................................................................... 8\n第 3 章 · 原理：Transformer Block 内部 .................................................................................................. 9",
+    "index": 4,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 4,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "204afb58af9b",
+    "source_id": "e099736d3823",
+    "content": "93.1 词嵌入 + 位置嵌入 ........................................................................................................................... 9\n3.2 自注意力：核心中的核心 ................................................................................................................ 9\n3.3 前馈网络 FFN .................................................................................................................................... 9",
+    "index": 5,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 5,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "7654807f4ea8",
+    "source_id": "e099736d3823",
+    "content": "93.4 残差连接 + LayerNorm ............................................................................................................... 10\n3.5 输出层 ............................................................................................................................................... 10\n第 4 章 · 逐行搭建模型.................................................................................................................................. 11",
+    "index": 6,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 6,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "becce2357e73",
+    "source_id": "e099736d3823",
+    "content": "114.1 配置类 ............................................................................................................................................... 11\n4.2 因果自注意力 ................................................................................................................................... 11\n4.3 前馈网络 ........................................................................................................................................... 12",
+    "index": 7,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 7,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "ae4005fab5c4",
+    "source_id": "e099736d3823",
+    "content": "124.4 一个 Block........................................................................................................................................ 12\n4.5 完整 GPT .......................................................................................................................................... 12\n第 5 章 · 训练循环 .......................................................................................................................................... 14",
+    "index": 8,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 8,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "577a6b93f89f",
+    "source_id": "e099736d3823",
+    "content": "145.1 训练的本质 ....................................................................................................................................... 14\n5.2 加上验证集评估 ............................................................................................................................... 14\n5.3 一个完整可跑的最小示例（字符级，无需联网） .................................................................... 15",
+    "index": 9,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 9,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "36d1fb9d0a9b",
+    "source_id": "e099736d3823",
+    "content": "15第 6 章 · 生成文本 .......................................................................................................................................... 16\n6.1 自回归生成原理 ............................................................................................................................... 16\n6.2 两个关键旋钮 ................................................................................................................................... 16",
+    "index": 10,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 10,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "9b0841502481",
+    "source_id": "e099736d3823",
+    "content": "166.3 调用生成 ........................................................................................................................................... 16\n第 7 章 · 加载官方 GPT-2 权重 ................................................................................................................... 17",
+    "index": 11,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 11,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "e84f9f841f7c",
+    "source_id": "e099736d3823",
+    "content": "177.1 真 GPT-2 的配置 ............................................................................................................................ 17\n7.2 从 HuggingFace 加载并搬运权重 .............................................................................................. 17\n7.3 用真权重生成 ................................................................................................................................... 18",
+    "index": 12,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 12,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "e3a4bacb0eba",
+    "source_id": "e099736d3823",
+    "content": "18第 8 章 · 调参、进阶与常见报错 ................................................................................................................. 19\n8.1 让训练更好的常用技巧 .................................................................................................................. 19\n8.2 把小模型扩成真 GPT-2 ................................................................................................................. 19",
+    "index": 13,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 13,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "65f335334d18",
+    "source_id": "e099736d3823",
+    "content": "198.3 常见报错速查 ................................................................................................................................... 19\n8.4 继续深入的路标 ............................................................................................................................... 20",
+    "index": 14,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 14,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "e1f1150e0749",
+    "source_id": "e099736d3823",
+    "content": "20第 0 章 · 全局地图：我们要做什么\nGPT-2 听起来很复杂，但拆开看，它只是一个把上一章那 8 个超参数变成可运行代码的下一个词\n预测器。整个模型做的事只有一句话：给定前面的 token，预测下一个 token 的概率分布。\n本指南分成由浅入深的若干阶段，每一阶段都能独立跑通、看到结果：\n阶段\n你会做什么\n产出\n1 环境\n装好 PyTorch，理解张量\n能跑 Hello Tensor\n2 数据\n把文本变成 token 序列\n训练数据张量\n3 原理\n推导注意力、FFN、残差\n看懂每个公式\n4 搭模型\n逐行写出 GPT 类\n随机初始化的模型\n5 训练\n写训练循环，看 loss 下降\n会生成文本的小模型\n6 生成\n采样、温度、top-k\n可控的文本输出\n7 官方权重\n加载 GPT-2 124M\n复现真实 GPT-2\n8 进阶\n调参、扩展、踩坑\n继续深入的路标",
+    "index": 15,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 15,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "b254d7f6baab",
+    "source_id": "e099736d3823",
+    "content": "加载 GPT-2 124M\n复现真实 GPT-2\n8 进阶\n调参、扩展、踩坑\n继续深入的路标学习建议  不要跳读。每一段代码都先自己敲一遍跑通，再看下一段。报错是最好的老师——本指\n南第 8 章专门列了常见报错。\n我们的目标模型从一个极小版（约 700 万参数，CPU 几分钟就能训练）起步，结构与真正的\nGPT-2 124M 完全一致——只是层数、宽度小一些。等你跑通，把配置数字调大就是真 GPT-\n2。\n\n\n\n第 1 章 · 环境准备\n1.1 需要装什么\n• Python 3.9+（建议用 conda 或 venv 建一个干净环境）\n• PyTorch —— 唯一的核心依赖，负责张量计算和自动求导\n• tiktoken —— OpenAI 官方的 GPT-2 分词器（第 2 章用）\n• numpy —— 数据处理（PyTorch 会自带）\n1.2 安装命令\n# 1) 建虚拟环境（可选但强烈推荐）\npython -m venv gpt2env\nsource gpt2env/bin/activate      # Windows: gpt2env\\Scripts\\activate",
+    "index": 16,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 16,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "07c3f9275ef3",
+    "source_id": "e099736d3823",
+    "content": "/activate      # Windows: gpt2env\\Scripts\\activate# 2) 装 PyTorch —— CPU 版（最通用，先用这个跑通）\npip install torch\n\n#    如果有 NVIDIA GPU，去 pytorch.org 选对应 CUDA 版本，例如：\n#    pip install torch --index-url https://download.pytorch.org/whl/cu121\n\n# 3) 装分词器\npip install tiktoken numpy\n1.3 验证安装 + 认识张量\n张量（Tensor）就是多维数组，是深度学习里一切数据的载体。先跑通这段，顺便建立形状\n（shape）的直觉：\nimport torch\n\n# 选设备：优先 CUDA，其次 Mac 的 MPS，最后 CPU\ndevice = ('cuda' if torch.cuda.is_available()\nelse 'mps' if torch.backends.mps.is_available()\nelse 'cpu')\nprint('使用设备:', device)",
+    "index": 17,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 17,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "7f4206f22860",
+    "source_id": "e099736d3823",
+    "content": "else 'cpu')\nprint('使用设备:', device)x = torch.randint(0, 100, (2, 4))   # 形状 [2, 4]: 2 条序列，每条 4 个 token\nprint(x, x.shape)\n\n形状直觉  贯穿全文我会用 [B, T, C] 标注张量：B = batch(几条序列), T = time(序列长度/几个\ntoken), C = channel(每个token 的向量维度，即 d_model)。看到任何张量先问自己它的 [B,T,C]\n是多少，调试就成功一半了。\n\n\n\n第 2 章 · 数据：从文本到 token\n2.1 为什么要分词\n模型只认数字，不认文字。分词（tokenization）就是把字符串切成一个个 token 并映射成整数\nID。GPT-2 用的是 BPE（字节对编码）：常见词作为一个整体，罕见词拆成子词片段，词表共\n50257 个。\n2.2 用官方分词器\nimport tiktoken\nenc = tiktoken.get_encoding('gpt2')   # 首次运行会联网下载词表文件",
+    "index": 18,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 18,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "9b544bf6a24c",
+    "source_id": "e099736d3823",
+    "content": " = tiktoken.get_encoding('gpt2')   # 首次运行会联网下载词表文件ids = enc.encode('Hello, world!')\nprint(ids)                 # 例如 [15496, 11, 995, 0]\nprint(enc.decode(ids))     # 还原成 'Hello, world!'\nprint('词表大小:', enc.n_vocab)   # 50257\n跑不通？  如果你的环境无法联网下载 BPE 文件，可以先用「字符级分词」替代：把文本里所有不\n同字符排序编号即可。结构完全一样，只是词表从 50257 变成几十个字符。本指南第 5 章给了字\n符级的完整可跑示例。\n2.3 准备训练数据\n找一个纯文本文件（莎士比亚全集、某本小说、你自己的语料都行），存成 input.txt。然后整本\n编码成一个长 token 序列，切出训练/验证集：\nimport torch, tiktoken\n\nwith open('input.txt', 'r', encoding='utf-8') as f:\ntext = f.read()",
+    "index": 19,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 19,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "af042fa36a02",
+    "source_id": "e099736d3823",
+    "content": "text = f.read()enc = tiktoken.get_encoding('gpt2')\ndata = torch.tensor(enc.encode(text), dtype=torch.long)\nprint('总 token 数:', len(data))\n\nn = int(0.9 * len(data))      # 前 90% 训练，后 10% 验证\ntrain_data = data[:n]\nval_data   = data[n:]\n\n2.4 取一个 batch（最关键的数据函数）\n训练时不是一次喂整本书，而是随机截取很多小片段。每个片段长 block_size，标签 y 就是 x 整\n体右移一位——因为我们要预测「下一个」token。\nblock_size = 256   # 一次看多长的上下文（即上一章的「最大序列长度」）\nbatch_size = 16    # 一次并行处理几条",
+    "index": 20,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 20,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "d08ce675cce0",
+    "source_id": "e099736d3823",
+    "content": "batch_size = 16    # 一次并行处理几条def get_batch(split):\nd = train_data if split == 'train' else val_data\n# 随机选 batch_size 个起点\nix = torch.randint(len(d) - block_size - 1, (batch_size,))\nx = torch.stack([d[i     : i+block_size  ] for i in ix])  # [B, T]\ny = torch.stack([d[i+1   : i+block_size+1] for i in ix])  # [B, T] 右移一位\nreturn x.to(device), y.to(device)\n为什么 y 是 x 右移一位  对位置 t 的输入 x[t]，模型要预测 x[t+1]。所以 y[t] = x[t+1]。一个长度\nT 的片段，一次就提供了 T 个「预测下一词」的训练样本，非常高效。",
+    "index": 21,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 21,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "fde10bbf4dae",
+    "source_id": "e099736d3823",
+    "content": "T 的片段，一次就提供了 T 个「预测下一词」的训练样本，非常高效。第 3 章 · 原理：Transformer Block 内部\n先把数学想清楚，写代码就只是翻译。一个 GPT 由 N 个相同的 Block 堆叠，每个 Block 做两件\n事：自注意力（看上下文） 和 前馈网络（做变换）。\n3.1 词嵌入 + 位置嵌入\ntoken ID 先查「词嵌入表」变成向量(wte)，再加上「位置嵌入」(wpe)告诉模型每个 token 在\n第几位。因为注意力本身分不清顺序，位置信息必须显式加进去。\nx = wte(idx) + wpe(positions)    # [B,T] -> [B,T,C]\n3.2 自注意力：核心中的核心\n每个 token 生成三个向量：Query(我在找什么)、Key(我是什么)、Value(我能提供什么)。用 Q\n和所有 K 做点积算出「相关度」，softmax 成权重，再去加权求和所有 V。这就是「token 之间\n互相看」的机制。\n缩放点积注意力公式：\nAttention(Q,K,V) = softmax( Q·Kᵀ / √d_k ) · V\n三个要点：",
+    "index": 22,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 22,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "59ed21b4500a",
+    "source_id": "e099736d3823",
+    "content": "三个要点：• 除以 √d_k：防止点积过大导致 softmax 饱和、梯度消失（上一章详述过）。\n• 因果掩码（causal mask）：GPT 是「单向」的——预测第 t 个词时只能看 1..t，不能偷看\n未来。实现上就是把注意力矩阵的上三角设成 -∞，softmax 后变 0。\n• 多头：把 C 维切成 n_head 份并行做注意力，每个头看不同子空间，最后拼回来。\n因果掩码图示  注意力分数是一个 T×T 矩阵，第 i 行第 j 列表示「第 i 个 token 对第 j 个 token 的\n关注度」。我们把 j>i 的格子(未来)全部屏蔽，只保留下三角。这就是 GPT 能「自回归」生成的根\n本。\n3.3 前馈网络 FFN\n注意力之后，每个 token 独立过一个两层 MLP：先升维到 4 倍(C→4C)，经 GELU 非线性激",
+    "index": 23,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 23,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "c8b95278e27c",
+    "source_id": "e099736d3823",
+    "content": "之后，每个 token 独立过一个两层 MLP：先升维到 4 倍(C→4C)，经 GELU 非线性激活，再降回 C。这是模型存放知识、做特征变换的主力(占约 2/3 参数)。\nFFN(x) = W₂ · GELU( W₁·x )      # C -> 4C -> C\n3.4 残差连接 + LayerNorm\n两个子层(注意力、FFN)都用「残差 + 归一化」包裹。GPT-2 采用 Pre-LN 结构——先归一化再\n进子层，再把结果加回原输入：\nx = x + Attention( LayerNorm(x) )   # 残差 1\nx = x + FFN(       LayerNorm(x) )   # 残差 2\n• 残差连接：让梯度能「抄近路」回传，是能堆几十上百层的关键。\n• LayerNorm：把每个 token 的向量归一化到稳定分布，让训练更稳、更快。\n3.5 输出层\n最后一层输出经过 LayerNorm，再乘一个 [C, vocab_size] 的矩阵(lm_head)，得到每个位置上\n「下一个 token」在全词表上的打分(logits)。GPT-2 让 lm_head 和词嵌入 wte 共享权重\n(weight tying)，省参数也更稳。",
+    "index": 24,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 24,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "3a45f4dc6b86",
+    "source_id": "e099736d3823",
+    "content": "(weight tying)，省参数也更稳。第 4 章 · 逐行搭建模型\n现在把第 3 章的原理翻译成代码。我们自底向上：配置 → 注意力 → FFN → Block → 完整\nGPT。下面每一段都已实测可运行。\n4.1 配置类\nimport torch, torch.nn as nn, torch.nn.functional as F, math",
+    "index": 25,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 25,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "c7ecd9e1ae4e",
+    "source_id": "e099736d3823",
+    "content": "ch, torch.nn as nn, torch.nn.functional as F, mathclass GPTConfig:\ndef __init__(self, vocab_size=50257, block_size=256,\nn_layer=4, n_head=4, n_embd=128, dropout=0.0):\nself.vocab_size = vocab_size   # 词表大小\nself.block_size = block_size   # 最大上下文长度 T\nself.n_layer    = n_layer      # Block 层数\nself.n_head     = n_head       # 注意力头数\nself.n_embd     = n_embd       # d_model，即 C\nself.dropout    = dropout\n4.2 因果自注意力\nclass CausalSelfAttention(nn.Module):\ndef __init__(self, cfg):\nsuper().__init__()\nassert cfg.n_embd % cfg.n_head == 0   # C 必须能被头数整除",
+    "index": 26,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 26,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "71e8c741e7fb",
+    "source_id": "e099736d3823",
+    "content": "assert cfg.n_embd % cfg.n_head == 0   # C 必须能被头数整除# 一个大矩阵一次算出 Q,K,V (所以是 3 倍)\nself.c_attn = nn.Linear(cfg.n_embd, 3 * cfg.n_embd)\nself.c_proj = nn.Linear(cfg.n_embd, cfg.n_embd)   # 输出投影\nself.n_head = cfg.n_head\nself.n_embd = cfg.n_embd\nself.attn_dropout  = nn.Dropout(cfg.dropout)\nself.resid_dropout = nn.Dropout(cfg.dropout)\n# 因果掩码：下三角为 1，注册成 buffer(不参与训练)\nself.register_buffer('mask',\ntorch.tril(torch.ones(cfg.block_size, cfg.block_size))\n.view(1, 1, cfg.block_size, cfg.block_size))",
+    "index": 27,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 27,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "676549ba6ec7",
+    "source_id": "e099736d3823",
+    "content": ".view(1, 1, cfg.block_size, cfg.block_size))def forward(self, x):\nB, T, C = x.size()                       # [B,T,C]\nq, k, v = self.c_attn(x).split(self.n_embd, dim=2)  # 各 [B,T,C]\n# 拆成多头: [B,T,C] -> [B, n_head, T, head_dim]\nk = k.view(B,T,self.n_head,C//self.n_head).transpose(1,2)\nq = q.view(B,T,self.n_head,C//self.n_head).transpose(1,2)\nv = v.view(B,T,self.n_head,C//self.n_head).transpose(1,2)\n# 注意力分数 [B,nh,T,T]，缩放\natt = (q @ k.transpose(-2,-1)) * (1.0 / math.sqrt(k.size(-1)))",
+    "index": 28,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 28,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "9c0b060ae346",
+    "source_id": "e099736d3823",
+    "content": ".transpose(-2,-1)) * (1.0 / math.sqrt(k.size(-1)))# 因果掩码：未来位置设 -inf\natt = att.masked_fill(self.mask[:,:,:T,:T] == 0, float('-inf'))\natt = F.softmax(att, dim=-1)\natt = self.attn_dropout(att)\ny = att @ v                              # [B,nh,T,head_dim]\n# 多头拼回 [B,T,C]\ny = y.transpose(1,2).contiguous().view(B,T,C)\nreturn self.resid_dropout(self.c_proj(y))\n提速选项  PyTorch 2.0+ 有 F.scaled_dot_product_attention，会自动用 FlashAttention 内核，\n比上面手写的快很多也省显存。学习阶段建议先用手写版看清原理，跑大模型时再换成它。\n4.3 前馈网络\nclass MLP(nn.Module):\ndef __init__(self, cfg):\nsuper().__init__()",
+    "index": 29,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 29,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "4359795c6333",
+    "source_id": "e099736d3823",
+    "content": "def __init__(self, cfg):\nsuper().__init__()self.c_fc   = nn.Linear(cfg.n_embd, 4 * cfg.n_embd)   # 升维\nself.c_proj = nn.Linear(4 * cfg.n_embd, cfg.n_embd)   # 降维\nself.dropout = nn.Dropout(cfg.dropout)\ndef forward(self, x):\nreturn self.dropout(self.c_proj(F.gelu(self.c_fc(x))))\n4.4 一个 Block\nclass Block(nn.Module):\ndef __init__(self, cfg):\nsuper().__init__()\nself.ln_1 = nn.LayerNorm(cfg.n_embd)\nself.attn = CausalSelfAttention(cfg)\nself.ln_2 = nn.LayerNorm(cfg.n_embd)\nself.mlp  = MLP(cfg)\ndef forward(self, x):",
+    "index": 30,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 30,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "403429efab86",
+    "source_id": "e099736d3823",
+    "content": "self.mlp  = MLP(cfg)\ndef forward(self, x):x = x + self.attn(self.ln_1(x))   # Pre-LN 残差 1\nx = x + self.mlp(self.ln_2(x))    # Pre-LN 残差 2\nreturn x\n4.5 完整 GPT\nclass GPT(nn.Module):\ndef __init__(self, cfg):\nsuper().__init__()\nself.cfg = cfg\nself.transformer = nn.ModuleDict(dict(\nwte  = nn.Embedding(cfg.vocab_size, cfg.n_embd),  # 词嵌入\nwpe  = nn.Embedding(cfg.block_size, cfg.n_embd),  # 位置嵌入\ndrop = nn.Dropout(cfg.dropout),\nh    = nn.ModuleList([Block(cfg) for _ in range(cfg.n_layer)]),",
+    "index": 31,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 31,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "e23c54dfeb5e",
+    "source_id": "e099736d3823",
+    "content": "uleList([Block(cfg) for _ in range(cfg.n_layer)]),ln_f = nn.LayerNorm(cfg.n_embd),                  # 最终归一化\n))\nself.lm_head = nn.Linear(cfg.n_embd, cfg.vocab_size, bias=False)\nself.transformer.wte.weight = self.lm_head.weight     # 权重共享",
+    "index": 32,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 32,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "a2639ace18bb",
+    "source_id": "e099736d3823",
+    "content": "former.wte.weight = self.lm_head.weight     # 权重共享def forward(self, idx, targets=None):\nB, T = idx.size()\npos = torch.arange(0, T, dtype=torch.long, device=idx.device)\ntok_emb = self.transformer.wte(idx)        # [B,T,C]\npos_emb = self.transformer.wpe(pos)        # [T,C] 自动广播\nx = self.transformer.drop(tok_emb + pos_emb)\nfor block in self.transformer.h:\nx = block(x)\nx = self.transformer.ln_f(x)\nlogits = self.lm_head(x)                   # [B,T,vocab_size]\nloss = None\nif targets is not None:\nloss = F.cross_entropy(",
+    "index": 33,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 33,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "5edee32d1901",
+    "source_id": "e099736d3823",
+    "content": "if targets is not None:\nloss = F.cross_entropy(logits.view(-1, logits.size(-1)),  # [B*T, vocab]\ntargets.view(-1))                  # [B*T]\nreturn logits, loss\n自检  跑一遍 m = GPT(GPTConfig()); 然后随机输入。初始 loss 应该约等于 ln(vocab_size) =\nln(50257) ≈ 10.8。我实测是 10.67——因为模型还没学任何东西，相当于在 5 万个词里瞎猜，这\n个数字对上了就说明结构没错。",
+    "index": 34,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 34,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "49fb3098b40c",
+    "source_id": "e099736d3823",
+    "content": "个数字对上了就说明结构没错。第 5 章 · 训练循环\n5.1 训练的本质\n训练就是不断重复四步：取数据 → 前向算 loss → 反向求梯度 → 优化器更新权重。loss 用交叉\n熵，衡量「预测分布」和「真实下一个词」的差距。\nmodel = GPT(GPTConfig()).to(device)\noptimizer = torch.optim.AdamW(model.parameters(), lr=3e-4)\n\nmax_iters = 5000\nfor step in range(max_iters):\nxb, yb = get_batch('train')\nlogits, loss = model(xb, yb)      # 前向 + 算 loss\noptimizer.zero_grad(set_to_none=True)  # 清空旧梯度\nloss.backward()                   # 反向传播求梯度\noptimizer.step()                  # 更新权重",
+    "index": 35,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 35,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "c0d49aed0604",
+    "source_id": "e099736d3823",
+    "content": "optimizer.step()                  # 更新权重if step % 500 == 0:\nprint(f'step {step}: loss {loss.item():.4f}')\n5.2 加上验证集评估\n@torch.no_grad()\ndef estimate_loss(eval_iters=50):\nmodel.eval()\nout = {}\nfor split in ['train', 'val']:\nlosses = torch.zeros(eval_iters)\nfor k in range(eval_iters):\nx, y = get_batch(split)\n_, loss = model(x, y)\nlosses[k] = loss.item()\nout[split] = losses.mean().item()\nmodel.train()\nreturn out",
+    "index": 36,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 36,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "78d5cc4c9e36",
+    "source_id": "e099736d3823",
+    "content": "model.train()\nreturn out# 在训练循环里每隔一段调用：\n# if step % 500 == 0:\n#     l = estimate_loss()\n#     print(f\"step {step}: train {l['train']:.4f}, val {l['val']:.4f}\")\ntrain.eval() / train.train() 是什么  它们切换 Dropout 等层的行为：训练时开 Dropout(随机丢\n弃,防过拟合)，评估/生成时必须关掉。忘记切换是新手最常见的 bug 之一。",
+    "index": 37,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 37,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "adc088e00b1f",
+    "source_id": "e099736d3823",
+    "content": "弃,防过拟合)，评估/生成时必须关掉。忘记切换是新手最常见的 bug 之一。5.3 一个完整可跑的最小示例（字符级，无需联网）\n如果你还没准备好语料或装不了 tiktoken，下面这段把前面所有部分串起来，用字符级分词在一\n小段文本上训练。我实测 300 步内 loss 从 3.0 降到 2.1，并开始吐出训练文本里的词。把这段先\n跑通，你就完成了一次完整的「手搓 GPT」闭环：\n# === 接在第 4 章模型代码之后 ===\ntext = open('input.txt').read()      # 任意文本；没有就用一段重复字符串测试\nchars = sorted(list(set(text)))\nstoi = {ch:i for i,ch in enumerate(chars)}\nitos = {i:ch for ch,i in stoi.items()}\ndata = torch.tensor([stoi[ch] for ch in text], dtype=torch.long)",
+    "index": 38,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 38,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "71ede1b7eabe",
+    "source_id": "e099736d3823",
+    "content": "ensor([stoi[ch] for ch in text], dtype=torch.long)cfg = GPTConfig(vocab_size=len(chars), block_size=64,\nn_layer=4, n_head=4, n_embd=128)\nmodel = GPT(cfg).to(device)\nopt = torch.optim.AdamW(model.parameters(), lr=3e-4)\n\ndef get_batch(bs=32):\nix = torch.randint(len(data)-cfg.block_size-1, (bs,))\nx = torch.stack([data[i:i+cfg.block_size] for i in ix])\ny = torch.stack([data[i+1:i+1+cfg.block_size] for i in ix])\nreturn x.to(device), y.to(device)",
+    "index": 39,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 39,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "11089d0299f6",
+    "source_id": "e099736d3823",
+    "content": "return x.to(device), y.to(device)for step in range(3000):\nx, y = get_batch()\n_, loss = model(x, y)\nopt.zero_grad(set_to_none=True); loss.backward(); opt.step()\nif step % 300 == 0: print(step, round(loss.item(), 4))\n\ntorch.save(model.state_dict(), 'my_gpt.pt')   # 保存权重",
+    "index": 40,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 40,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "24edfd924714",
+    "source_id": "e099736d3823",
+    "content": "rch.save(model.state_dict(), 'my_gpt.pt')   # 保存权重第 6 章 · 生成文本\n6.1 自回归生成原理\n生成是「一个一个吐字」：把已有序列喂进模型，取最后一个位置的 logits，按概率采一个新\ntoken，拼到序列末尾，再重复。这就是自回归(autoregressive)。\n@torch.no_grad()\ndef generate(self, idx, max_new_tokens, temperature=1.0, top_k=None):\nfor _ in range(max_new_tokens):\n# 上下文超过 block_size 就裁掉最前面\nidx_cond = idx[:, -self.cfg.block_size:]\nlogits, _ = self(idx_cond)\nlogits = logits[:, -1, :] / temperature   # 只取最后一步\nif top_k is not None:\nv, _ = torch.topk(logits, top_k)\nlogits[logits < v[:, [-1]]] = float('-inf')",
+    "index": 41,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 41,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "3f6407aef121",
+    "source_id": "e099736d3823",
+    "content": "logits[logits < v[:, [-1]]] = float('-inf')probs = F.softmax(logits, dim=-1)\nidx_next = torch.multinomial(probs, num_samples=1)  # 按概率采样\nidx = torch.cat((idx, idx_next), dim=1)\nreturn idx\n6.2 两个关键旋钮\n参数\n作用\n调大的效果\ntemperature\n给 logits 缩放，控制随机性\n越高越发散/有创意，越低越保守/重复\ntop_k\n只在概率最高的 k 个里采样\n过滤低概率词，避免胡言乱语",
+    "index": 42,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 42,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "0f2642f6c3e4",
+    "source_id": "e099736d3823",
+    "content": "top_k\n只在概率最高的 k 个里采样\n过滤低概率词，避免胡言乱语6.3 调用生成\nmodel.eval()\ncontext = torch.tensor([[stoi['h']]], device=device)  # 起始 token\nout = model.generate(context, max_new_tokens=200, temperature=0.8, top_k=40)\nprint(''.join(itos[i] for i in out[0].tolist()))\n\n# 用 tiktoken 时：\n# start = torch.tensor([enc.encode('The ')], device=device)\n# out = model.generate(start, 200, temperature=0.8, top_k=40)\n# print(enc.decode(out[0].tolist()))",
+    "index": 43,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 43,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "89f4be3d6254",
+    "source_id": "e099736d3823",
+    "content": "# print(enc.decode(out[0].tolist()))第 7 章 · 加载官方 GPT-2 权重\n你手搓的结构如果和官方 GPT-2 一致，就能直接把 OpenAI 训练好的权重灌进去，立刻得到一\n个会说人话的真 GPT-2。这是验证你实现正确性的终极测试。\n7.1 真 GPT-2 的配置\n型号\nn_layer\nn_head\nn_embd\n参数量\ngpt2 (124M)\n12\n12\n768\n约 124M\ngpt2-medium\n24\n16\n1024\n约 350M\ngpt2-large\n36\n20\n1280\n约 774M\ngpt2-xl\n48\n25\n1600\n约 1558M",
+    "index": 44,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 44,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "68a3cd592180",
+    "source_id": "e099736d3823",
+    "content": "36\n20\n1280\n约 774M\ngpt2-xl\n48\n25\n1600\n约 1558M四个型号 block_size 都是 1024，vocab_size 都是 50257。把第 4 章配置改成 124M 那一行，\n结构就和官方完全对齐。\n7.2 从 HuggingFace 加载并搬运权重\n先装 transformers：pip install transformers。下面这个类方法把 HF 的权重逐个拷进我们自己\n的模型：\n@classmethod\ndef from_pretrained(cls, model_type='gpt2'):\nfrom transformers import GPT2LMHeadModel\nconfig_args = {\n'gpt2':        dict(n_layer=12, n_head=12, n_embd=768),\n'gpt2-medium': dict(n_layer=24, n_head=16, n_embd=1024),\n'gpt2-large':  dict(n_layer=36, n_head=20, n_embd=1280),",
+    "index": 45,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 45,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "c03eda53817c",
+    "source_id": "e099736d3823",
+    "content": "large':  dict(n_layer=36, n_head=20, n_embd=1280),'gpt2-xl':     dict(n_layer=48, n_head=25, n_embd=1600),\n}[model_type]\nconfig_args.update(vocab_size=50257, block_size=1024)\ncfg = GPTConfig(**config_args)\nmodel = cls(cfg)\nsd = model.state_dict()",
+    "index": 46,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 46,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "d895211ce08d",
+    "source_id": "e099736d3823",
+    "content": "model = cls(cfg)\nsd = model.state_dict()hf = GPT2LMHeadModel.from_pretrained(model_type)\nsd_hf = hf.state_dict()",
+    "index": 47,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 47,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "f852422ede12",
+    "source_id": "e099736d3823",
+    "content": "sd_hf = hf.state_dict()# HF 用 Conv1D，权重是 [in,out]，我们用 Linear 是 [out,in]，这4 类要转置\ntransposed = ['attn.c_attn.weight', 'attn.c_proj.weight',\n'mlp.c_fc.weight', 'mlp.c_proj.weight']\nkeys = [k for k in sd_hf if not k.endswith('.attn.masked_bias')\nand not k.endswith('.attn.bias')]\nfor k in keys:\nif any(k.endswith(w) for w in transposed):\nwith torch.no_grad(): sd[k].copy_(sd_hf[k].t())\nelse:\nwith torch.no_grad(): sd[k].copy_(sd_hf[k])\nreturn model\n唯一的坑：转置  HF 早期 GPT-2 用的是 Conv1D 层，它的权重矩阵方向和标准 nn.Linear 相反。",
+    "index": 48,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 48,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "6ca328558f68",
+    "source_id": "e099736d3823",
+    "content": "所以 c_attn/c_proj/c_fc/mlp.c_proj 这四个权重在搬运时必须 .t() 转置。我已验证：除这 4 类外其\n余直接拷贝，最终参数量对上 124.4M。\n7.3 用真权重生成\nimport tiktoken\nmodel = GPT.from_pretrained('gpt2').to(device)\nmodel.eval()\nenc = tiktoken.get_encoding('gpt2')",
+    "index": 49,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 49,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "6305010a3ec3",
+    "source_id": "e099736d3823",
+    "content": "model.eval()\nenc = tiktoken.get_encoding('gpt2')start = torch.tensor([enc.encode('The meaning of life is')], device=device)\nout = model.generate(start, max_new_tokens=50, temperature=0.8, top_k=40)\nprint(enc.decode(out[0].tolist()))\n如果输出是通顺的英文句子，恭喜——你手搓的 GPT-2 和 OpenAI 官方实现逐个权重等价。你\n真正读懂了它。",
+    "index": 50,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 50,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "898390fbb1aa",
+    "source_id": "e099736d3823",
+    "content": "真正读懂了它。第 8 章 · 调参、进阶与常见报错\n8.1 让训练更好的常用技巧\n• 学习率预热 + 余弦衰减(warmup + cosine decay)：开头小、爬到峰值再缓慢下降，比固\n定 lr 收敛更好。\n• 梯度裁剪：torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)，防止梯度爆炸。\n• 权重衰减：AdamW 的 weight_decay=0.1，对线性层加正则，对 LayerNorm/偏置/嵌入\n不加。\n• 混合精度：GPU 上用 torch.autocast + GradScaler，省显存又提速一倍以上。\n• 梯度累积：显存小就累积多个小 batch 的梯度再更新一次，等效大 batch。\n8.2 把小模型扩成真 GPT-2\n你已有的代码一个字不用改结构，只改配置数字即可：\ncfg = GPTConfig(vocab_size=50257, block_size=1024,\nn_layer=12, n_head=12, n_embd=768)   # 这就是 124M",
+    "index": 51,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 51,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "142cc9229292",
+    "source_id": "e099736d3823",
+    "content": "n_layer=12, n_head=12, n_embd=768)   # 这就是 124M现实提醒  从零训练 124M 到接近官方效果，需要约百亿级 token 和数十张 GPU·天的算力。学习\n目的下，建议小模型练手 + 加载官方权重，不必硬训大的。想认真训练可参考 Karpathy 的\nnanoGPT / build-nanogpt 项目。\n8.3 常见报错速查\n现象\n原因\n解决\nloss 不降，一直 ~10.8\n学习率太小或数据/标签错\n位\n检查 y 是否为 x 右移一位；lr 调到 3e-4\nloss 变 nan\n梯度爆炸或 lr 太大\n加梯度裁剪；降 lr；检查有无除零\nCUDA out of memory\nbatch/block/模型太大\n减小 batch_size、block_size 或用梯度累积\nshape mismatch\n张量维度对不上\n打印每步 .shape，对照 [B,T,C]\n生成全是重复/乱码\n没切 eval、温度极端\nmodel.eval()；temperature≈0.8, top_k≈40\nmask 维度错\nblock_size 与输入不符\n用 self.mask[:,:,:T,:T] 切片",
+    "index": 52,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 52,
+      "total_chunks": 54
+    }
+  },
+  {
+    "chunk_id": "597e4dc3c0ba",
+    "source_id": "e099736d3823",
+    "content": "block_size 与输入不符\n用 self.mask[:,:,:T,:T] 切片8.4 继续深入的路标\n1. nanoGPT（Karpathy）：本指南结构与其一脉相承，去读它的完整工程实现。\n2. 《Attention Is All You Need》(2017)：Transformer 原始论文。\n3. GPT-2 论文《Language Models are Unsupervised Multitask Learners》。\n4. 现代改进：RoPE 旋转位置编码、RMSNorm、SwiGLU、GQA、FlashAttention——这些\n是 LLaMA 等新模型相对 GPT-2 的关键升级，是你下一步的方向。\n完成这 8 章，你已经从随机初始化训练出能生成文本的模型，并验证了它与官方 GPT-2 等价。这不\n是「调用 API」，而是真正从原理到代码的完整掌握。\n参考：Vaswani et al. (2017) Attention Is All You Need；Radford et al. (2019) GPT-2；Karpathy, nanoGPT。本指南所\n有核心代码均在 PyTorch 环境中实测运行通过。",
+    "index": 53,
+    "metadata": {
+      "filename": "从零手搓GPT-2完整指南.pdf",
+      "file_type": "pdf",
+      "chunk_index": 53,
+      "total_chunks": 54
+    }
+  }
+]
