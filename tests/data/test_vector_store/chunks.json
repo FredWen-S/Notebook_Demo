@@ -1,0 +1,37 @@
+[
+  {
+    "chunk_id": "251b7f589d0b",
+    "source_id": "doc1",
+    "content": "机器学习是人工智能的一个重要分支",
+    "index": 0,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "1da2de826027",
+    "source_id": "doc1",
+    "content": "深度学习使用多层神经网络来处理数据",
+    "index": 1,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "0e12cb863bef",
+    "source_id": "doc1",
+    "content": "自然语言处理让计算机能够理解人类语言",
+    "index": 2,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "7d55376fe753",
+    "source_id": "doc1",
+    "content": "计算机视觉让机器能够看懂图片和视频",
+    "index": 3,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "760ff89a1eb4",
+    "source_id": "doc1",
+    "content": "强化学习通过奖励机制让智能体学会决策",
+    "index": 4,
+    "metadata": {}
+  }
+]
